@@ -2,12 +2,12 @@
 class Computer
 {
 
-    protected $motherboard;
-    protected $cpu;
-    protected $gpu;
-    protected $ram;
-    protected $alimentation;
-    protected $storage;
+    public $motherboard;
+    public $cpu;
+    public $gpu;
+    public $ram;
+    public $alimentation;
+    public $storage;
 
     public function __construct(string $motherboard, string $cpu, string $gpu, string $ram, string $alimentation, string $storage)
     {

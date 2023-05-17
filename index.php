@@ -1,6 +1,7 @@
 <?php
 
-include __DIR__.'/models/computer.php'
+include __DIR__.'/models/computer.php';
+include __DIR__.'/db.php';
 
 ?>
 
@@ -16,8 +17,31 @@ include __DIR__.'/models/computer.php'
     <title>Computer Object</title>
 </head>
 
-<body>
-    
+<body class="bg-dark text-light">
+
+    <header class="text-center">
+        <h1>Computers</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <?php foreach ($computers as $computer) : ?>
+                    <div class="col">
+                        <div class="card text-bg-secondary h-100">
+                            <h3><?= $computer -> motherboard ;?></h3>
+                            <h3><?= $computer -> cpu ;?></h3>
+                            <h3><?= $computer -> gpu ;?></h3>
+                            <h3><?= $computer -> ram ;?></h3>
+                            <h3><?= $computer -> alimentation ;?></h3>
+                            <h3><?= $computer -> storage ;?></h3>
+                        </div>
+                    </div>
+                <? endforeach ;?>
+            </div>
+        </div>
+    </main>
+
 </body>
 
 </html>
