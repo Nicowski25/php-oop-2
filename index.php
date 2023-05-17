@@ -1,21 +1,23 @@
-<?php 
+<?php
 
-class computer {
+include __DIR__.'/models/computer.php'
 
-    protected $motherboard;
-    protected $cpu;
-    protected $gpu;
-    protected $ram;
-    protected $alimentation;
-    protected $storage;
+?>
 
-    public function __construct(string $motherboard, string $cpu, string $gpu, string $ram, string $alimentation, string $storage) {
-        $this->motherboard = $motherboard;
-        $this->cpu = $cpu;
-        $this->gpu = $gpu;
-        $this->ram = $ram;
-        $this->alimentation = $alimentation;
-        $this->storage = $storage;
-    }
+<!DOCTYPE html>
+<html lang="en">
 
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Computer Object</title>
+</head>
+
+<body>
+    
+</body>
+
+</html>
