@@ -1,6 +1,8 @@
 <?php
 
 include __DIR__.'/models/computer.php';
+include __DIR__.'/models/desktop.php';
+include __DIR__.'/models/laptop.php';
 include __DIR__.'/db.php';
 
 ?>
