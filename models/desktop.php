@@ -17,4 +17,19 @@ class Desktop extends Computer
         return 'Desktop';
     }
 
+    public function getKeyboard()
+    {
+        return $this->keyboard;
+    }
+
+    public function getMouse()
+    {
+        return $this->mouse;
+    }
+
+    public function getMonitor()
+    {
+        return $this->monitor;
+    }
+
 }

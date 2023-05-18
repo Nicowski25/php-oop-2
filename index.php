@@ -19,6 +19,12 @@ require_once __DIR__.'/db.php';
     <title>Computer Object</title>
 </head>
 
+<style>
+    .part {
+        font-size:large;
+    }
+</style>
+
 <body class="bg-dark text-light">
 
     <header class="text-center">
@@ -31,14 +37,22 @@ require_once __DIR__.'/db.php';
                 <?php foreach ($computers as $computer) : ?>
                     <div class="col">
                         <div class="card text-bg-secondary h-100">
-                            <h3><?= $computer -> getMotherboard() ;?></h3>
-                            <h3><?= $computer -> getCpu() ;?></h3>
-                            <h3><?= $computer -> getGpu() ;?></h3>
-                            <h3><?= $computer -> getRam() ;?></h3>
-                            <h3><?= $computer -> getAlimentation() ;?></h3>
-                            <h3><?= $computer -> getStorage() ;?></h3>
+                            <h5>Motherboard: <span class="part"><?= $computer -> getMotherboard() ;?></span></h5>
+                            <h5>CPU: <span class="part"><?= $computer -> getCpu() ;?></span></h5>
+                            <h5>GPU: <span class="part"><?= $computer -> getGpu() ;?></span></h5>
+                            <h5>RAM: <span class="part"><?= $computer -> getRam() ;?></span></h5>
+                            <h5>Alimentation: <span class="part"><?= $computer -> getAlimentation() ;?></span></h5>
+                            <h5>Storage: <span class="part"><?= $computer -> getStorage() ;?></span></h5>
+                            <?php if ($computer->getType() == 'Desktop'):?>
+                                <h5>Keyboard: <span class="part"><?= $computer -> getKeyboard() ;?></span></h5>
+                                <h5>Mouse: <span class="part"><?= $computer -> getMouse() ;?></span></h5>
+                                <h5>Monitor: <span class="part"><?= $computer -> getMonitor() ;?></span></h5>   
+                            <?php elseif ($computer->getType() == 'Laptop') :?>
+                                <h5>Ports: <span class="part"><?= $computer -> getPorts() ;?></span></h5>
+                                <h5>Battery mAh: <span class="part"><?= $computer -> getBatterymAh() ;?></span></h5>                                  
+                            <?php endif ;?>
                             <div class="card-footer">
-                                <?php $computer->getType()?>
+                                <?= $computer->getType() ;?>
                             </div>
                         </div>
                     </div>

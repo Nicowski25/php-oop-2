@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ .'/computer.php';
+require_once __DIR__ . '/computer.php';
 class Laptop extends Computer
 {
     public function __construct(string $motherboard, string $cpu, string $gpu, string $ram, string $alimentation, string $storage, public string $ports, public string $batterymAh)
@@ -13,5 +13,15 @@ class Laptop extends Computer
     public function getType()
     {
         return 'Laptop';
+    }
+
+    public function getPorts()
+    {
+        return $this->ports;
+    }
+
+    public function getBatterymAh()
+    {
+        return $this->batterymAh;
     }
 }
