@@ -1,9 +1,9 @@
 <?php
 
-include __DIR__.'/models/computer.php';
-include __DIR__.'/models/desktop.php';
-include __DIR__.'/models/laptop.php';
-include __DIR__.'/db.php';
+require_once __DIR__.'/models/computer.php';
+require_once __DIR__.'/models/desktop.php';
+require_once __DIR__.'/models/laptop.php';
+require_once __DIR__.'/db.php';
 
 ?>
 
@@ -31,12 +31,15 @@ include __DIR__.'/db.php';
                 <?php foreach ($computers as $computer) : ?>
                     <div class="col">
                         <div class="card text-bg-secondary h-100">
-                            <h3><?= $computer -> motherboard ;?></h3>
-                            <h3><?= $computer -> cpu ;?></h3>
-                            <h3><?= $computer -> gpu ;?></h3>
-                            <h3><?= $computer -> ram ;?></h3>
-                            <h3><?= $computer -> alimentation ;?></h3>
-                            <h3><?= $computer -> storage ;?></h3>
+                            <h3><?= $computer -> getMotherboard() ;?></h3>
+                            <h3><?= $computer -> getCpu() ;?></h3>
+                            <h3><?= $computer -> getGpu() ;?></h3>
+                            <h3><?= $computer -> getRam() ;?></h3>
+                            <h3><?= $computer -> getAlimentation() ;?></h3>
+                            <h3><?= $computer -> getStorage() ;?></h3>
+                            <div class="card-footer">
+                                <?php $computer->getType()?>
+                            </div>
                         </div>
                     </div>
                 <? endforeach ;?>

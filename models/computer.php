@@ -18,4 +18,39 @@ class Computer
         $this->alimentation = $alimentation;
         $this->storage = $storage;
     }
+
+    public function getType()
+    {
+        return 'Computer';
+    }
+
+    public function getMotherboard()
+    {
+        return $this->motherboard;
+    }
+
+    public function getCpu()
+    {
+        return $this->cpu;
+    }
+
+    public function getGpu()
+    {
+        return $this->gpu;
+    }
+
+    public function getRam()
+    {
+        return $this->ram;
+    }
+
+    public function getAlimentation()
+    {
+        return $this->alimentation;
+    }
+
+    public function getStorage()
+    {
+        return $this->storage;
+    }
 }
